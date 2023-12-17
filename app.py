@@ -45,13 +45,13 @@ def main():
     SatisfactionScore = st.slider("Satisfactory score of customer on service", 1, 5, 1)
     MaritalStatus = st.radio("Marital status of customer", ("Married", "Single", "Divorced"))
     NumberOfAddress = st.selectbox("Total number of address added on particular customer", np.arange(1, 50))
-    Complain = st.radio("Any complaint has been raised in last month", ("Yes", "No"))
+    Complain = st.radio("Any complaint has been raised in last month", ("No", "Yes"))
     Complain = 1 if Complain == "Yes" else 0
     OrderAmountHikeFromlastYear = st.selectbox("Percentage increases in order from last year", np.arange(0.0, 100.0))
     CouponUsed = float(st.selectbox("Total number of coupon has been used in last month", np.arange(0, 50.0)))
     OrderCount = st.selectbox("Total number of orders has been places in last month", np.arange(0, 50))
     DaySinceLastOrder = st.selectbox("Day Since last order by customer", np.arange(0, 100))
-    CashbackAmount = st.selectbox("Average cashback in last month", np.arange(50.0, 400.0))
+    CashbackAmount = st.selectbox("Average cashback in last month", np.arange(0.0, 400.0))
 
     data_dict = {
         'Tenure' : [Tenure], 'PreferredLoginDevice' : [PreferredLoginDevice],'CityTier' : [CityTier],'WarehouseToHome' : [WarehouseToHome],'PreferredPaymentMode' : [PreferredPaymentMode],'Gender' : [Gender],'HourSpendOnApp' : [HourSpendOnApp],'NumberOfDeviceRegistered' : [NumberOfDeviceRegistered],'PreferedOrderCat' : [PreferedOrderCat],'SatisfactionScore' : [SatisfactionScore],'MaritalStatus' : [MaritalStatus],'NumberOfAddress' : [NumberOfAddress],'Complain' : [Complain],'OrderAmountHikeFromlastYear' : [OrderAmountHikeFromlastYear],'CouponUsed' : [CouponUsed],'OrderCount' : [OrderCount],'DaySinceLastOrder' : [DaySinceLastOrder],'CashbackAmount' : [CashbackAmount]
